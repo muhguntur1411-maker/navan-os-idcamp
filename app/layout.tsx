@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,9 +12,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
   title: "Navan OS",
   description: "Proactive Micro-ERP & AI-Driven Analytics Dashboard.",
+  manifest: "/manifest.json",
   other: {
     "dicoding:email": "muhguntur1411@gmail.com",
   },
